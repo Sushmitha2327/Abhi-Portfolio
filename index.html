@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MILE HIGH FOCUS</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #080808;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    .poster {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .poster img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Clicking anywhere opens Google Drive */
+    .poster-click {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: block;
+    }
+
+    /* Subtle link inside the empty box */
+    .drive-link {
+      position: absolute;
+      left: 51%;
+      top: 77.5%;
+      width: 43%;
+      height: 5%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 3px;
+      background: transparent;
+      border: none;
+
+      color: #d8c28b;
+      font-size: clamp(6px, 1.3vw, 9px);
+      font-weight: normal;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+      overflow: hidden;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+
+      z-index: 2;
+    }
+
+    .drive-link:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="poster">
+
+    <!-- Poster image: keep poster.png in the same folder -->
+    <img
+      src="Mile high focus2.png"
+      alt="Mile High Focus Photography and Editing"
+    >
+
+    <!-- Click anywhere on the poster -->
+    <a
+      class="poster-click"
+      href="https://drive.google.com/drive/folders/1ac7SWF0qZQssqoAuwYkczimP1NgGbSaj?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Open Google Drive portfolio"
+    ></a>
+
+    <!-- Actual Drive link shown subtly in the empty box -->
+    <a
+      class="drive-link"
+      href="https://drive.google.com/drive/folders/1ac7SWF0qZQssqoAuwYkczimP1NgGbSaj?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Open Google Drive"
+    ></a>
+
+  </main>
+
+</body>
+</html>
